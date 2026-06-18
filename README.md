@@ -148,8 +148,8 @@ This is used for high-frequency triggers for example every 15 minutes. These fre
 https://learn.microsoft.com/en-us/fabric/data-factory/pipeline-runs 
 https://learn.microsoft.com/en-us/azure/data-factory/concepts-pipeline-execution-triggers 
 
-Option D: Hourly 
-If you choose Hourly, you can configure it to repeat every 4 hours, but you cannot restrict it to specific days of the week. These frequencies apply continuously regardless of the day of the week, unless combined with a weekly trigger configuration. 
+**Option D: Hourly 
+If you choose Hourly, you can configure it to repeat every 4 hours, but you cannot restrict it to specific days of the week. These frequencies apply continuously regardless of the day of the week, unless combined with a weekly trigger configuration. **
 https://learn.microsoft.com/en-us/fabric/data-factory/pipeline-runs 
 https://learn.microsoft.com/en-us/azure/data-factory/concepts-pipeline-execution-triggers 
 ------------------------------------------------------------------------------------------------------------------ 
