@@ -117,9 +117,7 @@ While usage metrics help you monitor if you need scale-out by checking CPU or Me
 https://learn.microsoft.com/en-us/fabric/admin/tenant-settings-index 
  
 Option D: At the tenant level, set Data Activator to enabled 
-Data Activator is a no-code event detection engine that transforms data streams into automated actions. It automatically triggers actions when specific patterns or conditions are detected in data sources. It continuously monitors these data sources with low latency, and initiates actions when thresholds are met, or specific patterns are detected. These actions can include sending emails or Teams notifications, launching Power Automate flows, or integrating with third-party systems. 
-
-Data Activator is used for real-time alerting and automated actions, e.g. sending an email when a value reaches a threshold. It has no role in memory management or scaling of semantic models. 
+Data Activator is a no-code event detection engine that transforms data streams into automated actions. It automatically triggers actions when specific patterns or conditions are detected in data sources. It continuously monitors these data sources with low latency, and initiates actions when thresholds are met, or specific patterns are detected. These actions can include sending emails or Teams notifications, launching Power Automate flows, or integrating with third-party systems.Data Activator is used for real-time alerting and automated actions, e.g. sending an email when a value reaches a threshold. It has no role in memory management or scaling of semantic models.
 https://learn.microsoft.com/en-us/fabric/real-time-intelligence/data-activator/activator-introduction 
 -------------------------------------------------------------------------------------------------------------------------
 Q.3 You have a Fabric tenant that contains a data pipeline. 
