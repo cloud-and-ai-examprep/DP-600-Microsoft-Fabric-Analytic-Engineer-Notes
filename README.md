@@ -44,15 +44,15 @@ Star Schema: Always design Dimension and Fact tables to avoid performance bottle
 DAX Queries: Using DAX query view in Power BI to analyze semantic models.
 --------------------------------------------------------------------------------------------------------------------------
 
-T## 📝 Sample DP-600 Exam Questions
+## 📝 Sample DP-600 Exam Questions
 
 Try these sample questions to check your current preparation level:
 
 Q.1 You have a Fabric tenant that contains a warehouse. The warehouse uses row-level security (RLS).You create a Direct Lake semantic model that uses the Delta tables and RLS of the warehouse.When users interact with a report built from the model, which mode will be used by the DAX queries?
-A) DirectQuery
-B) Dual
-C) Direct Lake
-D) Import
+* A) DirectQuery
+* B) Dual
+* C) Direct Lake
+* D) Import
 
 Correct Answer: [A] 
 Explanation: DirectQuery 
@@ -84,14 +84,15 @@ Import models need to be refreshed, usually on a scheduled basis. A full refresh
 Model data is only as current as the latest refresh, and so Import models need to be refreshed, usually on a scheduled basis. A full refresh removes all data from all tables and reloads it from the data source. This operation can be expensive in terms of time and resources for the Power BI service and data sources. 
 
 https://learn.microsoft.com/en-us/power-bi/connect-data/service-dataset-modes-understand#import-mode 
+
 --------------------------------------------------------------------------------------------------------- 
 
 Q.2 You have a Fabric tenant that uses a Microsoft Power BI Premium capacity. You need to enable scale-out for a semantic model. What should you do first? 
 
-A) At the semantic model level, set large dataset storage format to OFF 
-B) At the tenant level, set create and use metrics to be enabled 
-C) At the semantic model level, set large dataset storage format to ON 
-D) At the tenant level, set Data Activator to enabled 
+* A) At the semantic model level, set large dataset storage format to OFF 
+* B) At the tenant level, set create and use metrics to be enabled 
+* C) At the semantic model level, set large dataset storage format to ON 
+* D) At the tenant level, set Data Activator to enabled 
 
 Correct Answer: [C] 
 Explanation: At the semantic model level, set large dataset storage format to ON 
@@ -99,10 +100,10 @@ Semantic model scale-out helps Power BI deliver fast performance while your repo
 By default, scale-out is enabled for your tenant, but it's not enabled for semantic models in your tenant. To enable scale-out for a semantic model, you must use the Power BI REST APIs. Before enabling, the following prerequisites must be met: 
 1. The Scale-out queries for large semantic models setting for your tenant is enabled (default). 
 2. Your workspace resides on a Power BI Premium capacity: 
-     a. Premium Per User (PPU) 
-     b. Power BI Premium P SKUs 
-     c. Power BI A SKUs for Power BI Embedded (also known as embed for your customers). 
-     d. Fabric F SKUs 
+     * a. Premium Per User (PPU) 
+     * b. Power BI Premium P SKUs 
+     * c. Power BI A SKUs for Power BI Embedded (also known as embed for your customers). 
+     * d. Fabric F SKUs
 3. The Large semantic model storage format setting is enabled. 
 https://learn.microsoft.com/en-us/fabric/enterprise/powerbi/service-premium-scale-out 
 https://learn.microsoft.com/en-us/power-bi/enterprise/service-premium-scale-out-configure#enable-scale-out-in-power-bi-service 
@@ -119,14 +120,15 @@ https://learn.microsoft.com/en-us/fabric/admin/tenant-settings-index
 Option D: At the tenant level, set Data Activator to enabled 
 Data Activator is a no-code event detection engine that transforms data streams into automated actions. It automatically triggers actions when specific patterns or conditions are detected in data sources. It continuously monitors these data sources with low latency, and initiates actions when thresholds are met, or specific patterns are detected. These actions can include sending emails or Teams notifications, launching Power Automate flows, or integrating with third-party systems.Data Activator is used for real-time alerting and automated actions, e.g. sending an email when a value reaches a threshold. It has no role in memory management or scaling of semantic models.
 https://learn.microsoft.com/en-us/fabric/real-time-intelligence/data-activator/activator-introduction 
+
 -------------------------------------------------------------------------------------------------------------------------
 Q.3 You have a Fabric tenant that contains a data pipeline. 
 You need to ensure that the pipeline runs every four hours on Mondays and Fridays. 
 What should you set repeat for the schedule? 
-A) Daily 
-B) By the minute 
-C) Weekly 
-D) Hourly 
+* A) Daily 
+* B) By the minute 
+* C) Weekly 
+* D) Hourly 
  
 
 Correct Answer: [C] 
@@ -148,18 +150,19 @@ This is used for high-frequency triggers for example every 15 minutes. These fre
 https://learn.microsoft.com/en-us/fabric/data-factory/pipeline-runs 
 https://learn.microsoft.com/en-us/azure/data-factory/concepts-pipeline-execution-triggers 
 
-**Option D: Hourly 
-If you choose Hourly, you can configure it to repeat every 4 hours, but you cannot restrict it to specific days of the week. These frequencies apply continuously regardless of the day of the week, unless combined with a weekly trigger configuration. **
+
+Option D: Hourly
+If you choose Hourly, you can configure it to repeat every 4 hours, but you cannot restrict it to specific days of the week. These frequencies apply continuously regardless of the day of the week, unless combined with a weekly trigger configuration.
 https://learn.microsoft.com/en-us/fabric/data-factory/pipeline-runs 
-https://learn.microsoft.com/en-us/azure/data-factory/concepts-pipeline-execution-triggers 
+https://learn.microsoft.com/en-us/azure/data-factory/concepts-pipeline-execution-triggers
+
 ------------------------------------------------------------------------------------------------------------------ 
 Q.4 You have a Fabric tenant that contains a warehouse. A user discovers that a report that usually takes two minutes to render has been running for 45 minutes and has still not been rendered. You need to identify what is preventing the report query from completing. Which dynamic management view (DMV) should you use? 
-A) sys.dm-exec_requests 
-B) sys.dm_.exec._sessions 
-C) sys.dm._exec._connections 
-D) sys.dm_pdw_exec_requests 
+* A) sys.dm-exec_requests 
+* B) sys.dm_.exec._sessions 
+* C) sys.dm._exec._connections 
+* D) sys.dm_pdw_exec_requests 
 
- 
 Correct Answer: [ D ] 
 Explanation: sys.dm_pdw_exec_requests 
 The correct DMV to identify what is preventing the report query from completing is sys.dm_pdw_exec_requests. This DMV is specific to Microsoft Analytics Platform System previously known as SQL Data Warehouse, which is the environment assumed to be used here. It provides information about all queries and load commands currently running or that have recently run.  
@@ -170,7 +173,7 @@ Option A: sys.dm-exec_requests
 While this is a standard SQL Server DMV, in the context of Fabric's distributed architecture, sys.dm_pdw_exec_requests is the specific view required to track the lifecycle of a query across the warehouse. 
 https://learn.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql?view=fabric&preserve-view=true 
 
-OptionB: sys.dm_.exec._sessions 
+Option B: sys.dm_.exec._sessions 
 Returns one row per authenticated session on SQL Server. sys.dm_exec_sessions is a server-scope view that shows information about all active user connections and internal tasks. This information includes client version, client program name, client login time, login user, current session setting, and more.  
 
 Use sys.dm_exec_sessions to first view the current system load and to identify a session of interest and then learn more information about that session by using other dynamic management views or dynamic management functions, but it doesn't give you specific details on the execution progress or blockage of a single query request. 
@@ -179,12 +182,12 @@ https://learn.microsoft.com/en-us/sql/relational-databases/system-dynamic-manage
 Option C: sys.dm._exec._connections 
 Returns information about the connections established to this instance of the database engine and the details of each connection. Returns server wide connection information for SQL Server and Azure SQL Managed Instance. Returns connection information for the current database in Azure SQL Database. Returns connection information for all databases in the same elastic pool for databases in elastic pools in Azure SQL Database rather than the performance or status of a running report query. 
 https://learn.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql?view=fabric&preserve-view=true 
-----------------------------------------------------------------------------------------------------------Q.8 You have a Q.5 You have Fabric tenant that contains a lakehouse named Lakehouse1 contains a Delta table named Customer. When you query Customer, you discover that the query is slow to execute. You suspect that maintenance was NOT performed on the table. You need to identify whether maintenance tasks were performed on Customer.  
+----------------------------------------------------------------------------------------------------------------------- Q.5 You have Fabric tenant that contains a lakehouse named Lakehouse1 contains a Delta table named Customer. When you query Customer, you discover that the query is slow to execute. You suspect that maintenance was NOT performed on the table. You need to identify whether maintenance tasks were performed on Customer.  
 Solution: You run the following Spark SQL statement:  
 REFRESH TABLE customer  
 Does this meet the goal? 
-A) Yes 
-B) No  
+* A) Yes 
+* B) No  
 
 Correct Answer: [B] 
 The REFRESH TABLE statement does not provide information on whether maintenance tasks were performed. It only updates the metadata of a table to reflect any changes on the data files. It simply updates the cached metadata of the table in the Spark session. It ensures that Spark is aware of the most recent files if the table was modified by another process. It does not show a history of operations or physical maintenance. 
